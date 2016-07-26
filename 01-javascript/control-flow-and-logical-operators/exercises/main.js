@@ -15,17 +15,17 @@ if (numOne > numTwo) {
 
 console.log("\nThe World's translator");
 
-var language = "computer";
+var language = "chinese";
 
 switch (language) {
   case "chinese":
     console.log("Ni Hao Shi Jie");
     break;
   case "spanish":
-    console.log("Hola Mundo");
-    break;
+  case "catalan":
   case "portugese":
-    console.log("Ola Mundo");
+    console.log("Ola/ Hola Mundo");
+    break;
   case "computer":
     console.log("72 101 108 108 111 32 87 111 114 108 100");
     break;
@@ -33,10 +33,7 @@ switch (language) {
     console.log("Hello World");
 }
 
-
-
 //If score above 90 A, if between 70-90 B, if between 60-70 C if between 50-60 D if below 50 F
-
 console.log("\nThe Grade Assigner");
 
 var score = 20;
@@ -56,11 +53,16 @@ if (score>90) {
 // If num > 1 add to string "s"
 console.log("\nThe Pluralizer");
 
-var noun = "Bird";
+var noun = "Application";
 var num = 3;
 
-if (num > 1) {
-  console.log(num+" "+noun+"s");
+if (noun.endsWith("y") && (num !== 1)) {
+  var str = noun.slice(0,-1);
+  console.log(num+" "+str+"ies");
 } else {
+  if (num>1) {
+  console.log(num+" "+noun+"s");
+  } else {
   console.log(num+" "+noun);
+  }
 }
