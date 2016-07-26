@@ -53,12 +53,17 @@ if (score>90) {
 // If num > 1 add to string "s"
 console.log("\nThe Pluralizer");
 
-var noun = "Application";
-var num = 3;
+var noun = "Goose";
+var num = 2;
 
 if (noun.endsWith("y") && (num !== 1)) {
   var str = noun.slice(0,-1);
   console.log(num+" "+str+"ies");
+} else if(noun.indexOf('oo')!==-1 && num >1) {
+  var nounMod = noun.replace(/oo/i,'ee');
+  console.log(num+" "+nounMod);
+} else if(noun.indexOf('ee')!==-1) {
+  console.log(num+" "+noun);
 } else {
   if (num>1) {
   console.log(num+" "+noun+"s");
