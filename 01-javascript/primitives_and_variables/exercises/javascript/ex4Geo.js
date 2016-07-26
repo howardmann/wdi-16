@@ -7,7 +7,7 @@ console.log("Exercise 04: Geometrizer");
 // Calculate the area based on the radius, and output "The area is NN".
 
 var radius = 10;
-var pi = 3.14;
+var pi = Math.PI;
 var circumference = Math.floor(2*pi*radius);
 var area = Math.floor(pi*radius*radius);
 
