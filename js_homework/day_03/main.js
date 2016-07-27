@@ -111,9 +111,11 @@ verbing('seeming');
 console.log("\nSTRINGS: Not Bad");
 
 var notBad = function(string) {
+// Variable assign indexOf position for 'not' and 'bad' within string argument. Note: if string does not have substring 'not' and 'bad' it will return number -1
   var notIndex = string.indexOf('not');
   var badIndex = string.indexOf('bad');
 
+// Check that both 'not' and 'bad' substrings exist within string argument. If so, check if 'not' comes before 'bad', if so use slice to delete all characters after not (inclusive) and then add string "good!""
   if (notIndex !== -1 && badIndex !== -1) {
       if (notIndex < badIndex) {
           var str = string.slice(0,notIndex);
@@ -122,6 +124,7 @@ var notBad = function(string) {
           return msg;
       }
   }
+  // Otherwise print the string
   console.log(string);
   return string;
 };
