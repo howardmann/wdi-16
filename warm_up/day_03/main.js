@@ -32,13 +32,19 @@ console.log("BREAK\n");
 
 // Find a better way without writing first three lines of code
 
-  var num = 35;
+  var num = 2;
   var string = "";
+
   if (num%3===0) {
     string+="Pling";
-  } if (num%5===0) {
+  }
+
+  if (num%5===0) {
     string+="Plang";
-  } if (num%7===0) {
+  }
+
+  if (num%7===0) {
     string+="Plong";
   }
-  console.log(string || num);
+
+  console.log(string || num.toString());
