@@ -15,14 +15,15 @@ console.log("\nAge Calculator:");
 var calculateAge = function(birthYear, currentYear) {
   var highAge = currentYear - birthYear;
   var lowAge = currentYear - birthYear - 1;
-  console.log("You are either "+lowAge+" or "+highAge);
+  var result = ("You are either "+lowAge+" or "+highAge);
+  return result;
 };
 
 var currentYear = new Date().getFullYear();
 
-calculateAge(1970,currentYear);
-calculateAge(1980,currentYear);
-calculateAge(1990,currentYear);
+console.log(calculateAge(1970,currentYear));
+console.log(calculateAge(1980,currentYear));
+console.log(calculateAge(1990,currentYear));
 
 
 //#################
