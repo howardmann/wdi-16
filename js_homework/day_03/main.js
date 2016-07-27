@@ -7,14 +7,14 @@ var squareNumber = function(num) {
   console.log(msg.toString());
   return result;
 };
-squareNumber(3);
+squareNumber(3); // => The result of squaring the number 3.00 is 9.00
 
 var halfNumber = function(num) {
   var result = num/2;
   console.log("Half of "+num.toFixed(2)+" is "+result.toFixed(2));
   return result;
 };
-halfNumber(5);
+halfNumber(5); // => Half of 5.00 is 2.50
 
 
 var percentOf = function(num, den) {
@@ -23,7 +23,7 @@ var percentOf = function(num, den) {
   console.log(msg);
   return result;
 };
-percentOf(2,4);
+percentOf(2,4); // => 2.00 is 50.00% of 4.00
 
 var areaOfCircle = function(radius) {
   var pi = Math.PI;
@@ -32,7 +32,7 @@ var areaOfCircle = function(radius) {
   console.log(msg.toString());
   return result;
 };
-areaOfCircle(2);
+areaOfCircle(2); // => The area for a circle with a radius of 2.0 is 12.57
 
 //## Calculator part 2
 console.log("\nTHE CALCULATOR - Part 2:");
@@ -59,35 +59,37 @@ var drEvil = function(amount) {
   console.log(str);
   return str;
 };
-drEvil(10);
-drEvil(500);
-drEvil(1000000);
-drEvil(2000000);
+drEvil(10); // => 10 dollars
+drEvil(500); // => 500 dollars
+drEvil(1000000); // => 1000000 dollars (pinky)
+drEvil(2000000); // => 2000000 dollars (pinky)
 
 //## STRINGS MixUp
 console.log("\nSTRINGS: MixUp");
 
 var mixUp = function(A,B) {
-  var sliceA = B.charAt(0)+B.charAt(1)+A.slice(2); // using string.charAt(i)
-  var sliceB = A[0]+A[1]+B.slice(2); // using array position
+// Using charAt(i) string method to take first two characters (0 and 1) of string B and append to string A after slicing off first 2 characters. Shorthand array methd string[0] instead of string.charAt(0)
+  var sliceA = B.charAt(0)+B.charAt(1)+A.slice(2);
+  var sliceB = A[0]+A[1]+B.slice(2);
   console.log(sliceA+" "+sliceB);
 };
-mixUp("mix", "pod");
-mixUp("dog", "dinner");
+mixUp("mix", "pod"); // => pox mid
+mixUp("dog", "dinner"); // => dig donner
 
 //## STRINGS FixStart
 console.log("\nSTRINGS: FixStart");
 
 var fixStart = function(string) {
+// Use regular expression constructor to store a regular expression in a variable based on the first character of the string. Note use 'gi' argument to do find and replace all. Then pass regular expression variable into replace method ".replace(re,"*")" of the adjusted string which removes the first character "string.slice(1)". 
   var re = new RegExp(string[0],'gi');
   var end = string.slice(1);
   var fixEnd = string[0]+end.replace(re,"*");
   console.log(fixEnd);
   return fixEnd;
 };
-fixStart('babble');
-fixStart('abacadabra');
-fixStart('oompaloompa');
+fixStart('babble'); // => b*bble
+fixStart('abacadabra'); // => ab*c*d*br*a
+fixStart('oompaloompa'); // => o*mpal**mpa
 
 //## STRINGS Verbing
 console.log("\nSTRINGS: Verbing");
@@ -102,10 +104,10 @@ var verbing = function(string) {
     console.log(msg);
   }
 };
-verbing('swim');
-verbing('swimming');
-verbing('win');
-verbing('seeming');
+verbing('swim'); // => swimming
+verbing('swimming'); // => swimmingly
+verbing('win'); // => winning
+verbing('seeming'); // => seemingly
 
 //## STRINGS Not Bad
 console.log("\nSTRINGS: Not Bad");
@@ -129,9 +131,9 @@ var notBad = function(string) {
   return string;
 };
 
-notBad("This dinner is not that bad!");
-notBad("This movie is not so bad!");
-notBad("This dinner is not bad!");
-notBad("This movie is not as bad as I thought!");
-notBad("This dinner is bad!");
-notBad("I will not recommend this movie!");
+notBad("This dinner is not that bad!"); // => This dinner is good!
+notBad("This movie is not so bad!"); // => This movie is good!
+notBad("This dinner is not bad!"); // => This dinner is good!
+notBad("This movie is not as bad as I thought!"); // => This movie is good!
+notBad("This dinner is bad!"); // => This dinner is bad!
+notBad("I will not recommend this movie!"); // => I will not recommend this movie!
