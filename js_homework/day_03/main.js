@@ -80,7 +80,7 @@ mixUp("dog", "dinner"); // => dig donner
 console.log("\nSTRINGS: FixStart");
 
 var fixStart = function(string) {
-// Use regular expression constructor to store a regular expression in a variable based on the first character of the string. Note use 'gi' argument to do find and replace all. Then pass regular expression variable into replace method ".replace(re,"*")" of the adjusted string which removes the first character "string.slice(1)". 
+// Use regular expression constructor to store a regular expression in a variable based on the first character of the string. Note use 'gi' argument to do find and replace all. Then pass regular expression variable into replace method ".replace(re,"*")" of the adjusted string which removes the first character "string.slice(1)".
   var re = new RegExp(string[0],'gi');
   var end = string.slice(1);
   var fixEnd = string[0]+end.replace(re,"*");
