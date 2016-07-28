@@ -98,3 +98,32 @@ fruits.splice(bIndex,1);
 fruits.splice(bIndex,0,"Banana");
 
 // ## slice only works for strings, splice works for arrays
+
+// slice is not destructive while splice is destructive
+
+// ## Copying arrays
+// make an exact copy use slice method arr.slice(0,arr.length);
+// shorthand use slice(); to make a copy of an array
+
+var arrOfNumbers = [1,2,3];
+var newArrOfNums = arrOfNumbers.slice();
+//There is now no link between the two
+
+
+// Note: Using slice to copy an array is not very common because you have already defined the array and would just reference it again
+
+// ## Looping through arrays
+var arrOfFruits = ["Orange", "Mango", "Mandarin"];
+
+//How we access individiual elements of an array
+//How we could use something we already know to print them all out
+
+//Using for loop
+for (var i=0; i < arrOfFruits.length; i++ ) {
+  console.log(arrOfFruits[i]);
+}
+
+//Using built-in map method. Note: only works for modern browsers and is typically only used for altering data
+arrOfFruits.map(function(i) {
+  console.log("The current element is "+i);
+});
