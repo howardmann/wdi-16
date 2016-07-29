@@ -172,3 +172,32 @@ guessLetter('L');
 // chooseLetter("A");
 
 */
+
+
+//
+
+
+
+
+//** TEAMMATE SOLUTION
+
+wordLetters=["F", "O", "X", "T", "R", "O", "T"];
+guessLetters=[];
+
+for (var i = 0; i<wordLetters.length; i++){
+ guessLetters[i] = "_";
+}
+
+function guessLetter(guessedLetter) {
+ for (var i = 0; i<wordLetters.length; i++){
+   if (guessedLetter === wordLetters[i]){
+     guessLetters[i] = guessedLetter;
+   }
+ };
+ if (! guessLetters.includes("_")){
+   console.log("You have won! ");
+ }
+ console.log(guessLetters);
+};
+
+guessLetter("")

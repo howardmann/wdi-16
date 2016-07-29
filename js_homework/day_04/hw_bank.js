@@ -47,17 +47,47 @@ var bank = {
       sum+=this.accounts[i]["amount"];
     }
     return sum;
+  },
+  checkAccount: function(value) {
+      var found = false;
+      for (var i=0; i<this.accounts.length; i++) {
+        if (this.accounts[i]["name"] === value) {
+          found = true;
+          break;
+        }
+      }
+      return found;
+  },
+  changeAmount: function(name, amount) {
+    if (this.checkAccount(name)) {
+      for (var i=0; i<this.accounts.length; i++) {
+        if (this.accounts[i]["name"]===name) {
+          this.accounts[i]["amount"]+=amount;
+          console.log(this.accounts[i]);
+        }
+      }
+    } else {
+      console.log("Error. No record of account name: "+name);
+    }
   }
 };
+
+// Call on bank.addAccount method to add new ojbects with properties to bank object
 bank.addAccount("Harry",100,"Hogwarts");
 bank.addAccount("Hermione",50,"London");
 bank.addAccount("Ron",10,"Burrow");
+
+// Call on bank.totalAmount method to loop through and sum amount values of each bank.accounts object
 console.log(bank.totalAmount());
 
-// Check if has an account based on key value pair, if so return true otherwise false
+// Call on bank.checkAccount to check if name value exists within bank.accounts, if so change var found to true otherwise break loop
+console.log(bank.checkAccount("Harry"));
+console.log(bank.checkAccount("Hermione"));
+console.log(bank.checkAccount("Ron"));
+console.log(bank.checkAccount("Dirty Hacker"));
 
-var hasAccount = function(value) {
-    return bank.accounts[0].hasOwnProperty("name") && bank.accounts[0]["name"] === value;
-};
-
-console.log(hasAccount("Harry"));
+// Call on bank.changeAmount method to modify the amount value if an account exists otherwise print Error
+bank.changeAmount("Harry",100);
+bank.changeAmount("Hermione",20);
+bank.changeAmount("Ron",-50);
+bank.changeAmount("Dirty Hacker",-100);
