@@ -1,0 +1,18 @@
+.hot {
+  background-color: hotpink;
+  font-style: italic;
+}
+
+.warm {
+  background-color: orange;
+  font-weight: bold;
+}
+
+.cool {
+  background-color: chartreuse;
+}
+
+.big {
+  font-size: 50px;
+  font-weight: bold;
+}

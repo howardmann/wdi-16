@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Generate tag names with content: tagname{text goes here} key goes to end of line -->
+  <h1>Hello World</h1>
+  <h1>This is some gibberish</h1>
+
+  <!-- Generate tag names with content: a[href="url"] or img[src="url"]-->
+  a[src="https://ga.co"]
+  <a href="https://ga.co"></a>
+
+  img[src="http://fillmurray.com/200/200"]
+  <img src="http://fillmurray.com/200/200" alt="">
+
+  <!-- Joining shortcuts -->
+  a[href="https://ga.co"]{General Assuembly}
+  <a href="https://ga.co">General Assembly</a>
+
+  <!-- Creating siblings -->
+  h1+a
+  <h1></h1>
+  <a href=""></a>
+
+  <!-- Create children -->
+  header>h1
+  <header>
+    <h1></h1>
+  </header>
+
+  div.container>p>lorem
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quibusdam, expedita. Explicabo enim ipsum, sunt odit aliquid quis minima culpa fuga vitae. Nam exercitationem eum sed atque, fuga assumenda fugiat.</p>
+  </div>
+
+  <!-- List item shortcut -->
+  ul>li*3
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  ul>li*3>a[href="#"]{Link}
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+
+  <!-- Creating groups -->
+
+  (header>h1)+(div.container>h3)+(footer>h4)
+  <header>
+    <h1></h1>
+  </header>
+  <div class="container">
+    <h3></h3>
+  </div>
+  <footer>
+    <h4></h4>
+  </footer>
+
+  div.wrapper>((header>nav)+(div.main>p*3)+(footer>h3))
+  <div class="wrapper">
+    <header>
+      <nav></nav>
+    </header>
+    <div class="main">
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <footer>
+      <h3></h3>
+    </footer>
+  </div>
+
+
+
+</body>
+</html>

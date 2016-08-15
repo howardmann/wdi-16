@@ -1,0 +1,68 @@
+body {
+  background: gainsboro;
+  margin: 0;
+}
+
+/*Based on old display: inline-block method. DO NOT USE, now deprecated */
+
+/*.container {
+  width: 500px;
+  background: tomato;
+  margin: 0 auto;
+}
+
+.leftSidebar {
+  width: 70%;
+  height: 300px;
+  background: chartreuse;
+  display: inline-block;
+}
+
+.rightSidebar {
+  width: 29%;
+  height: 200px;
+  background: hotpink;
+  display: inline-block;
+}*/
+
+.container-float {
+  width: 500px;
+  background: tomato;
+  margin: 10px auto;
+
+}
+
+.left {
+  height: 400px;
+  width: 60%;
+  background: chartreuse;
+  display: inline-block;
+  float: left;
+}
+
+.right {
+  height: 300px;
+  width: 40%;
+  background: hotpink;
+  display: inline-block;
+  float: right;
+}
+
+.overflowed-container {
+  overflow: hidden; /* Overflow isn't meant to do this */
+}
+
+.clear {
+  clear: both;
+}
+
+/* After all elements which are declared clearfix create an empty content string*/
+.clearfix:after {
+  content: "";
+  clear: both; /* stop floating of all elements within clearfix */
+  display: block; /* whatever is an empty string create it is a block element stretching across the whole page and creating the barrier */
+  height: 10px;
+  background: black;
+}
+
+/*HM: USE CLEARFIX TO SOLVE FOR BARRIER TO STOP BUBBLING*/

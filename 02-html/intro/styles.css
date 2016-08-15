@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+
+  /*HM: for every element on the page, if you set a width and/ or a height, that will include padding, and the border. If we didn't have this line, padding and border would add to the element width and affect layouts. Trade-off is that this will reduce the element size to accomodate for the total width as specified */
+}
+
+body {
+  background: gainsboro;
+  text-align: center;
+  font-family: calibri;
+}
+
+p {
+  color: hotpink;
+}
+
+p:hover, p#veryTrendy:hover {
+  color: chartreuse;
+}
+
+.trendy {
+  color: lemonchiffon;
+}
+
+#veryTrendy {
+  color: rebeccapurple;
+}
+
+.trendiest {
+  color: tomato;
+}
+
+ul li {
+  color: lightslategray;
+  /*display: inline-block;*/
+}
+
+input:active, input:focus {
+  border: 50px solid chartreuse;
+}
+
+img.cage {
+  border: solid peru 2px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  transform: rotate(0deg);
+}
+
+img.cage:hover {
+  border-radius: 50%;
+  transform: rotate(1080deg);
+}
+
+body p.main {
+  padding: 10px;
+  /*margin:20px;*/
+  border: 1px solid hotpink;
+  width: 50%;
+}
+
+img.first {
+  width: 200px;
+  border: 50px solid black;
+  box-sizing: border-box; /*Use this to get around changing the size of the img*/
+  /*padding:10px;*/
+}
+
+/*
+  DISPLAY PROPERTY
+  none --> doesn't show up
+  block  --> nothing can sit next to it
+  inline --> can have elements sitting next to each other
+  inline-block --> elements can sit next to it, we can set widths and heights
+
+*/
+
+.left {
+  width: 50%;
+  height: 200px;
+  background: tomato;
+  display: inline-block;
+}
+
+.right {
+  width: 50%;
+  height: 300px;
+  background: hotpink;
+  display: inline-block;
+}

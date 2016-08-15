@@ -1,0 +1,73 @@
+body {
+  background: gainsboro;
+  font-family: monospace;
+}
+
+/* Use this each time to allow padding and width not to conflict*/
+* {
+  box-sizing: border-box;
+}
+
+/* Clearfix built-in to stop bubbling*/
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  background: black;
+  min-height: 200px;
+}
+
+header {
+  width: 100%;
+  background: white;
+  height: 100px;
+}
+
+header h1 {
+  line-height: 100px;
+  text-align: center;
+}
+
+.columns {
+  margin-top: 20px;
+  background: red;
+  /*ugly hack from CSS tricks, see negative margin below*/
+  overflow: hidden;
+}
+
+.left {
+  background: hotpink;
+  width: 70%;
+  min-height: 200px;
+  float: left;
+  padding: 2%;
+
+}
+
+.right {
+  background: chartreuse;
+  width: 30%;
+  min-height: 100px;
+  float: right;
+  padding: 2%;
+  /*ugly hack from CSS tricks. See columns above*/
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+
+footer {
+  background: yellow;
+  min-height: 100px;
+  padding: 2%;
+}
+
+footer h3 {
+  margin-top: 0px;
+}
