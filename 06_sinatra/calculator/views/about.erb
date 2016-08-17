@@ -1,0 +1,19 @@
+<h1>About page</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt impedit inventore cumque pariatur ab neque ex omnis minus quod, ad soluta quisquam magni, voluptate officia, iusto magnam reprehenderit distinctio mollitia?</p>
+
+
+  <!-- Syntax erb file print ruby code -->
+  2 + 2 = <%= 2 + 2 %>
+
+  <% todos = ["Sing happy birthday", "eat cake", "stare at badger"] %>
+
+  <% todos.each do |el| %>
+    <%= "<p>There is a new todo to print out #{el}</p>" %>
+
+  <% end %>
+
+  <ul>
+    <li><%= todos[0] %></li>
+    <li><%= todos[1] %></li>
+    <li><%= todos[2] %></li>
+  </ul>

@@ -1,0 +1,18 @@
+<h1>Calculate: This is where forms should be loaded</h1>
+
+
+<!--  If someone presses submit, the form action will get the url path /result-->
+<form action="/result" method="GET">
+  <p>
+    <label>What is your first number?</label>
+    <input type="number" name="first_number">
+    <!-- HM note: by using syntax "name" it will store the value of that input into the Ruby params hash for access in the GET url page params[:first_number] -->
+  </p>
+  <p>
+    <label>What is your second number?</label>
+    <input type="number" name="second_number">
+    <!-- params[:second_number] -->
+  </p>
+  <input type="submit" value="Text: Show Result">
+
+</form>
