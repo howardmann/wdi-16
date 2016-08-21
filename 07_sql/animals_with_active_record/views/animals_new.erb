@@ -1,0 +1,22 @@
+<h2>This should show the new form</h2>
+
+<!-- Method is POST request to /animals url. Refer main.rb. This will post the vales in the input names to params -->
+<form action="/animals" method="POST">
+  <p>
+    <label>Species: </label>
+    <input type="text" name="species">
+  </p>
+  <p>
+    <label>Image: </label>
+    <input type="text" name="image">
+  </p>
+  <p>
+    <label>Description: </label>
+    <input type="text" name="description">
+  </p>
+  <p>
+    <label>Habitat ID:</label>
+    <input type="number" name="habitat_id">
+  </p>
+  <input type="submit" value="Create animal">
+</form>

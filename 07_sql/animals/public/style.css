@@ -1,0 +1,14 @@
+body {
+  background-color: gainsboro;
+  font-family: monospace;
+}
+
+a {
+  color: hotpink;  
+}
+
+.yield {
+  border: 5px solid black;
+  padding: 20px;
+  background-color: lemonchiffon;
+}

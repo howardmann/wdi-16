@@ -1,0 +1,26 @@
+<h2>This should show our habitat</h2>
+
+<ul>
+  <li>The ID is <%= @habitat.id %></li>
+  <li>The landscape is <%= @habitat.landscape %></li>
+  <li>The climate is <%= @habitat.climate %></li>
+  <li>Animals are:
+  <% unless @habitat.animals == [] %>
+    <% @habitat.animals.each do |animal| %>
+      <ul>
+        <a href="/animals/<%= animal.id %>">
+          <li><%= animal.species %></li>
+        </a>
+      </ul>
+    <% end %>
+
+  <% else %>
+    No Animals
+  <% end %>
+
+  </li>
+</ul>
+
+<a href="/habitats/<%= @habitat['id'] %>/edit">Edit this habitat</a>
+
+<a href="/habitats/<%= @habitat['id'] %>/delete">Delete this habitat</a>

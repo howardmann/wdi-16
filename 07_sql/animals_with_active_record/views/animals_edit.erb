@@ -1,0 +1,23 @@
+<h2>This should show the edit form</h2>
+
+The ID is <%= @animal['id'] %>
+<!-- This is very important. we are posting the values to a new url, the one with the individual id with method post  -->
+<form action="/animals/<%= @animal['id'] %>" method="POST">
+  <p>
+    <label>Species: </label>
+    <input type="text" name="species" value = "<%= @animal['species'] %>">
+  </p>
+  <p>
+    <label>Image: </label>
+    <input type="text" name="image" value = "<%= @animal['image'] %>">
+  </p>
+  <p>
+    <label>Description: </label>
+    <input type="text" name="description" value = "<%= @animal['description'] %>">
+  </p>
+  <p>
+    <label>Habitat ID:</label>
+    <input type="number" name="habitat_id" value="<%= @animal.habitat_id %>">
+  </p>
+  <input type="submit" value="Edit animal">
+</form>
