@@ -1,0 +1,8 @@
+<h1>This is the color page</h1>
+<p style="background-color: <%= @color %>">Dynamic params input is: <%= @color %></p>
+<h2>Find me in the app/views/auto/color.html.erb</h2>
+<ul>
+  <li>In config/routes.rb: get '/auto/:color' => 'auto#color'</li>
+  <li>Redirects to controller/auto_controller.rb: def color '@color = params[:color]' end</li>
+  <li>Redirects to views/auto/color.html.erb: 'this page'</li>
+</ul>

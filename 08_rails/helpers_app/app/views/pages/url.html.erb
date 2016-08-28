@@ -1,0 +1,24 @@
+<h1>Pages#url</h1>
+<p>Find me in app/views/pages/url.html.erb</p>
+
+<p>get '/random' => 'pages#random'</p>
+<p>get '/numbers/:x/:y' => 'pages#two_numbers'</p>
+<p>get '/number/:number' => 'pages#single_number'</p>
+
+<h2>Long way using a href and routes</h2>
+<a href="/random">
+  Random page
+</a><br>
+
+<a href="/number/<%= @single_number %>">
+  Single Number Page
+</a><br>
+
+<a href="/numbers/<%= @x %>/<%= @y %>">
+  Two Numbers Page
+</a>
+
+<h2>Use Rails link_to helpers</h2>
+<%= link_to 'Random page', random_path %><br>
+<%= link_to 'Single Number page', number_path(@single_number) %><br>
+<%= link_to 'Two Numbers Page', numbers_path(@x, @y) %>

@@ -1,0 +1,40 @@
+<% unless own_user? %>
+  <h1>Users: <%= @user.name %></h1>
+<% else %>
+  <h1>Your account: <%= @user.name %></h1>
+<% end %>
+
+<h3>User details:</h3>
+<p>Name: <%= @user.name %></p>
+<p>Email: <%= @user.email %></p>
+
+<% if own_user? %>
+  <div class="controls">
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Delete', user_path(@user), method: :delete, data: {confirm: 'Are you sure?'} %>
+  </div>
+<% end %>
+
+<h3>Project details:</h3>
+
+<ul>
+  <% @user.projects.each do |el| %>
+    <li><%= link_to el.name, project_path(el) %></li>
+  <% end %>
+</ul>
+
+<% if own_user? %>
+  <%= link_to "New Project", new_project_path %>
+<% end %>
+
+<hr>
+
+<h3>Pledge details:</h3>
+<p>Total pledges: <%= @pledges.count %></p>
+<% if own_user? %>
+  <ul>
+    <% @pledges.each do |el| %>
+    <li><%= link_to "#{number_to_currency(el.amount)} for #{el.project.name} by #{el.user.name}", pledge_path(el) %></li>
+    <% end %>
+  </ul>
+<% end %>

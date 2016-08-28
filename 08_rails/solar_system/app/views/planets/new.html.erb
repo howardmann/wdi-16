@@ -1,0 +1,53 @@
+<h1>New Planet</h1>
+
+<!-- <%= form_for(@planet) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :moons %><br>
+    <%= f.number_field :moons %>
+  </p>
+  <p>
+    <%= f.label :orbit %><br>
+    <%= f.number_field :orbit %>
+  </p>
+  <p>
+    <%= f.label :diameter %><br>
+    <%= f.number_field :diameter %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %> -->
+
+<!-- Every html form needs a method(get, post, patch) and an action (url which it goes to) -->
+<form action="/planets" method="POST">
+
+  <p>
+    <label>Name:</label><br>
+    <input type="text" name="planet[name]">
+  </p>
+  <p>
+    <label>Image:</label><br>
+    <input type="url" name="planet[image]">
+  </p>
+  <p>
+    <label>Orbit:</label><br>
+    <input type="number" name="planet[orbit]">
+  </p>
+  <p>
+    <label>Diameter:</label><br>
+    <input type="number" name="planet[diameter]">
+  </p>
+  <p>
+    <label>Moons:</label><br>
+    <input type="number" name="planet[moons]">
+  </p>
+  <p>
+    <input type="submit" value="Create planet">
+  </p>
+
+</form>

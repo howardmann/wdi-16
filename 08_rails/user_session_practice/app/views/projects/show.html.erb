@@ -1,0 +1,26 @@
+<h1>Show Project: <%= @project.name %></h1>
+<h3>Project details:</h3>
+<p>Name: <%= @project.name %></p>
+<% if @project.user_id %>
+  <p>Created by: <%= @project.user.name %></p>
+<% end %>
+<% if @project.description %>
+  <p>Description: <%= @project.description %></p>
+<% end %>
+
+<% if @current_user.present? && @project.user_id == @current_user.id %>
+  <div class="controls">
+    <%= link_to 'Edit', edit_project_path(@project) %> |
+    <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: "Are you sure?"}  %>
+  </div>
+<% end %>
+
+<hr>
+<h3>Pledges:</h3>
+<ul>
+  <% @project.pledges.each do |el| %>
+    <li><%= "#{number_to_currency(el.amount)} from #{ el.user.name}" %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Pledge an amount', "/projects/#{@project.id}/pledges/new" %>

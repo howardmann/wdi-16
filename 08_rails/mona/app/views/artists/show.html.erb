@@ -1,0 +1,31 @@
+<h2>Show <%= @artist.name %> </h2>
+
+<ul>
+  <div class="show-image">
+    <% unless @artist.image == '' %>
+      <%= image_tag( @artist.image ) %>
+    <% else %>
+      <%= image_tag( "http://fillmurray.com/200/200") %>
+    <% end %>
+  </div>
+
+  <li>Nationality: <%= @artist.nationality %></li>
+  <li>Date of birth: <%= @artist.dob.strftime( "%A, %B %e, %Y" ) %></li>
+  <li>Period: <%= @artist.period %></li>
+
+</ul>
+
+<%= link_to "Edit", "/artists/#{@artist.id}/edit" %> |
+<%= link_to "Delete", "/artists/#{@artist.id}",
+  :method => :delete, :data => { :confirm => "Are you sure?" } %>
+
+<h3>Artworks</h3>
+
+<ul>
+  <% @artist.works.each do |w| %>
+    <li><%= link_to( w.title, "/works/#{w.id}" ) %></li>
+  <% end %>
+</ul>
+
+<!-- This is not required for now -->
+<!-- <p><%= link_to( 'Add new artwork', new_work_path) %></p> -->

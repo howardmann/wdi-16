@@ -1,0 +1,7 @@
+<h1>All Pledges</h1>
+
+<ul>
+  <% @pledges.each do |el| %>
+    <li><%= link_to "#{number_to_currency(el.amount)} from #{el.user.name} to Project #{el.project.name} by #{el.project.user.name}", project_path(el.project)  %></li>
+  <% end %>
+</ul>

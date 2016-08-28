@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mona</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="clearfix">
+    <h1>Mona CRUD</h1>
+    <nav>
+      <ul>
+        <li><a href="/artists">Artists</a></li>
+        <li><a href="/works">Works</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container clearfix">
+    <%= yield %>
+  </div>
+
+  <footer>
+    <small><em>GA WDI16 class exercise by Howie_Burger. Find me on <a href="https://github.com/howardmann" target="_blank">GitHub</a></em></small>
+  </footer>
+
+</body>
+</html>

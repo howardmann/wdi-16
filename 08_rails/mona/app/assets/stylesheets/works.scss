@@ -1,0 +1,31 @@
+// Place all the styles related to the Works controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.work-float {
+  // width: 120px;
+  // height: 150px;
+  // float: left;
+  // text-align: center;
+}
+
+.works-container img {
+  height: 150px;
+  border: 1px solid gainsboro;
+  float: left;
+  margin: 2px;
+  transition: 0.4s;
+}
+
+.works-container img:hover {
+  border: 1px solid hotpink;
+}
+.show-work-container {
+  text-align: center;
+}
+
+.show-work-container img {
+  height: 200px;
+  border: 3px solid gainsboro;
+}

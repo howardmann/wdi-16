@@ -1,0 +1,122 @@
+// Place all the styles related to the artists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// * {
+//   border-sizing: border-box;
+// }
+
+body {
+  margin: 0;
+}
+
+h1, h2 {
+  font-family: calibri;
+  text-transform: uppercase;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: rebeccapurple;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+header {
+  background-color: gainsboro;
+  padding: 5px 20px;
+  border-bottom: 2px solid grey;
+}
+
+header h1 {
+  float: left;
+}
+
+header nav {
+  float: right;
+  line-height: 2.5;
+  text-transform: uppercase;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  font-style: bold;
+  font-size: 20px;
+  color: black;
+  font-family: calibri;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px;
+  border: 4px solid black;
+  min-height: 450px;
+  position: relative;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 3px solid gainsboro;
+}
+
+.index-float {
+  float: left;
+  width: 250px;
+  height: 230px;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#index-image {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid gainsboro;
+  transition: 0.4s;
+}
+
+.index-name:hover + #index-image {
+  border: 1px solid hotpink;
+  top: 67px;
+}
+
+#index-image img {
+  width: 200px;
+  position: relative;
+  left: -15%;
+}
+
+.show-image img {
+  height: 200px;
+  border: solid 3px gainsboro;
+}
+
+footer {
+  background-color: grey;
+  color: white;
+  height: 50px;
+  padding: 20px;
+}

@@ -1,0 +1,56 @@
+<h2>Create a new artist</h2>
+
+<!-- Traditional way of doing similar to Sinatra -->
+<!-- <form action="/artists" method="POST">
+  <p>
+    <label>Name:</label><br>
+    <input type="text" name="artist[name]">
+  </p>
+  <p>
+    <label>Nationality:</label><br>
+    <input type="text" name="artist[nationality]">
+  </p>
+  <p>
+    <label>Date of birth:</label><br>
+    <input type="text" name="artist[dob]">
+  </p>
+  <p>
+    <label>Period:</label><br>
+    <input type="text" name="artist[period]">
+  </p>
+  <p>
+    <label>Image:</label><br>
+    <input type="url" name="artist[image]">
+  </p>
+  <p>
+    <input type="submit">
+  </p>
+</form> -->
+
+<!-- Use form_for helper -->
+
+<%= form_for @artist do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :required => true, autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </p>
+  <p>
+    <%= f.label :dob, "Date of Birth" %><br>
+    <%= f.text_field :dob %>
+  </p>
+  <p>
+    <%= f.label :period %><br>
+    <%= f.text_field :period %>
+  </p>
+  <p>
+    <%= f.label :image %><br>
+    <%= f.url_field :image %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

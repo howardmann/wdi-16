@@ -1,0 +1,16 @@
+<h1>Login</h1>
+
+<!-- HM!!! we use the form_tag helper and not the form_for helper because we are not trying to access anything from the database -->
+
+<%= form_tag login_path do %>
+  <p>
+    <%= label_tag :email %><br>
+    <%= email_field_tag :email, 'enter email', :required => true, autofocus: true %>
+  </p>
+  <p>
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password, 'enter password', :required => true %>
+  </p>
+
+  <%= submit_tag 'Login' %>
+<% end %>

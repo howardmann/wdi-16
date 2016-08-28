@@ -1,0 +1,12 @@
+<h1>This is the Auto engine page</h1>
+
+<p>HP: <%= @hp %></p>
+<p>Torque: <%= @torque %></p>
+<p>Total: <%= @hp+@torque %></p>
+
+<h2>Find me in the app/views/auto/engine.html.erb</h2>
+<ul>
+  <li>In config/routes.rb: get '/auto/:hp/:torque' => 'auto#engine'</li>
+  <li>Redirects to controller/auto_controller.rb: def engine '@hp = params[:hp]; @torque = params[:torque]' end</li>
+  <li>Redirects to views/auto/engine.html.erb: 'this page'</li>
+</ul>

@@ -1,0 +1,14 @@
+<h1>This is the calculator page</h1>
+
+<p>X value: <%= @x %></p>
+<p>Y value: <%= @y %></p>
+<p>Operator: <%= @operator %></p>
+<p>Result: <%= "#{@x} #{@operator} #{@y} is equal to = "%> <%= @result %> </p>
+
+
+<h2>Find me in the app/views/calc/calculate.html.erb</h2>
+<ul>
+  <li>In config/routes.rb: get '/calc/:x/:y/:operator' => 'calc#calculate'</li>
+  <li>Redirects to controller/calc_controller.rb: def calculate '@x = params[:x]; @y = params[:y] @operator = params[:operator]' end</li>
+  <li>Redirects to views/calc/calculate.html.erb: 'this page'</li>
+</ul>

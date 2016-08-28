@@ -1,12 +1,12 @@
 # ActiveRecord gives us Ruby methods to write SQL
 
-1. SETUP DATABASE: Require ActiveRecord and write dependancies (not really worth remembering):
+1. SETUP DATABASE: Require ActiveRecord and write dependancies:
   - touch three files:
     1. main.rb      => For scripts and execution of ActiveRecord and ruby
     2. users.sql    => For creating and initial seeding of sql table and code
     3. database.db  => For linking and storing users.sql script
 
-  - In users.sql. Create database table, seed data and link to database.db at end sqlite3 database.db < users.sql:
+  - In users.sql. Create database table, seed data and link to database.db at end sqlite3 database.db < users.sql (not really worth remembering):
   ```
   CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -23,7 +23,7 @@
   INSERT INTO users (first_name, last_name, username, description) VALUES ("Harpo", "Marx", "funnyman", "vaudeville giant");
 
   ```
-2. SETUP ActiveRecord code:
+2. SETUP ActiveRecord code (not really worth remembering):
   - In main.rb write code, establish connection with ActiveRecord:
     ```
     <!-- require both gems -->

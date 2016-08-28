@@ -1,0 +1,14 @@
+<h2>All works</h2>
+<p><%= link_to('Add a new work', new_work_path) %></p>
+
+
+<div class="works-container clearfix">
+
+    <% @works.each do |w| %>
+      <div class="work-float">
+        <p><%= link_to(image_tag(w.image), work_path(w)) %></p>
+      </div>
+    <% end %>
+
+
+</div>

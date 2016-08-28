@@ -1,0 +1,22 @@
+<h2><%= @work.title %></h2>
+
+<div class="show-work-container">
+  <%= image_tag( @work.image ) %>
+
+  <p>Year: <%= @work.year %> </p>
+
+  <p>Medium: <%= @work.medium %></p>
+
+  <p>Style: <%= @work.style %></p>
+
+  <% if @work.artist %>
+    <p>Artist: <%= link_to( @work.artist.name, "/artists/#{@work.artist.id}") %></p>
+  <% end %>
+
+  <div class="controls">
+    <%= link_to('Edit work', edit_work_path(@work)) %> |
+    <%= link_to('Delete work', work_path(@work), :method => :delete, :data => { :confirm => "Are you sure?" } ) %>
+  </div>
+
+
+</div>

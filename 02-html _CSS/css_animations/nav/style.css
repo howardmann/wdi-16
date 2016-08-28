@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: chartreuse;
+  color: black;
+  height: 50px;
+  width: 150px;
+  display: block;
+  margin: 50px auto;
+  line-height: 3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  border-bottom: 4px solid gainsboro;
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: hotpink;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.top { top: 0px; }
+.btn:hover .top { top: -50px; }
+.bottom { top: 50px; }
+.btn:hover .bottom { top: 0px; }
+
+.left { left: 0px; }
+.btn:hover .left { left: -150px; }
+.right { left: 120px;}
+.btn:hover .right { left: 0px; }

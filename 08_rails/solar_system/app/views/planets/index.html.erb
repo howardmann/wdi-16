@@ -1,0 +1,20 @@
+<h1>Planets index: <%= @planets.length %></h1>
+
+  <% @planets.each do |el| %>
+    <ul>
+      <li>
+        <a href="/planets/<%= el.id %>">
+          <strong><%= el.name %></strong>
+        </a>
+      </li>
+      <ul>
+        <li>Orbit: <%= el.orbit %></li>
+        <li>Diameter: <%= el.diameter %></li>
+        <li>Moons: <%= el.moons %></li>
+      </ul>
+    </ul>
+    <ul>
+      <a href="/planets/<%= el.id %>">Show</a> |
+      <a href="/planets/<%= el.id %>/edit">Edit</a> |
+    </ul>
+  <% end %>

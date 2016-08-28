@@ -1,0 +1,21 @@
+<h2>All Artists</h2>
+<p><%= link_to('Add a new artist', new_artist_path) %></p>
+  <% @artists.each do |el| %>
+
+    <div class="index-float">
+
+      <a class="index-name" href="/artists/<%= el.id %>">
+        <%= el.name %> <br> <em>(<%= el.nationality %>)</em>
+      </a>
+
+      <div id="index-image">
+        <% unless el.image == '' %>
+          <%= image_tag( el.image ) %>
+        <% else %>
+          <%= image_tag( "http://fillmurray.com/200/200") %>
+        <% end %>
+      </div>
+
+    </div>
+
+  <% end %>

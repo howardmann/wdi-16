@@ -1,0 +1,47 @@
+<h1>User: <%= @user.name %></h1>
+<p><%= @user.to_json %></p>
+<table>
+  <tr>
+    <td>Name:</td>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <td>Admin:</td>
+    <td><%= @user.admin %></td>
+  </tr>
+  <tr>
+    <td>Image:</td>
+    <td><%= @user.image %></td>
+  </tr>
+  <tr>
+    <td>Password:</td>
+    <td>chicken</td>
+  </tr>
+</table>
+
+<% if @current_user && @current_user.id == @user.id %>
+
+  <div class="controls">
+    <!-- Link to edit  -->
+    <%= link_to 'Edit', edit_user_path( @user ) %>
+    <!-- Link to delete  -->
+    <%= link_to 'Delete', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+
+<% end %>
+
+<!-- A list of all user mixtapes  -->
+<h3>User Mixtapes</h3>
+
+<% @user.mixtapes.each do |m| %>
+  <p><%= m.title %></p>
+  <ul>
+    <% m.songs.each do |s| %>
+      <li><%= s.name %> was created by <%= s.artist.name %></li>
+    <% end %>
+  </ul>
+<% end %>

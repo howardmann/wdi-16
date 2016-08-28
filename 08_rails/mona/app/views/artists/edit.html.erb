@@ -1,0 +1,27 @@
+<h2>Edit artist page: <%= @artist.name %></h2>
+
+<%= form_for @artist, :url => "/artists/#{@artist.id}" do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :required => true, autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </p>
+  <p>
+    <%= f.label :dob, "Date of Birth" %><br>
+    <%= f.text_field :dob %>
+  </p>
+  <p>
+    <%= f.label :period %><br>
+    <%= f.text_field :period %>
+  </p>
+  <p>
+    <%= f.label :image %><br>
+    <%= f.url_field :image %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

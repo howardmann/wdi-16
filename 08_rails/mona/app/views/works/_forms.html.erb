@@ -1,0 +1,37 @@
+<%= form_for @work do  |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :required => true %>
+  </p>
+  <p>
+    <%= f.label :year %><br>
+    <%= f.text_field :year, :required => true %>
+  </p>
+  <p>
+    <%= f.label :medium %><br>
+    <%= f.text_field :medium, :required => true %>
+  </p>
+  <p>
+    <%= f.label :style %><br>
+    <%= f.text_field :style, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %><br>
+    <%= f.url_field :image, :required => true %>
+  </p>
+
+  <!-- New rails helper: go through and assign the artist_id foreign key of the work child to an :id in the database Artist.all and show the :name of the Artist in a drop down -->
+  <!-- Rails built in helper f.collection_select(:artist_id, Artist.all, :id, :name) -->
+  <p>
+    <%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
+  </p>
+
+  <!-- <p>
+    <%= f.label :artist_id, 'Artist ID' %><br>
+    <%= f.number_field :artist_id %>
+  </p> -->
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

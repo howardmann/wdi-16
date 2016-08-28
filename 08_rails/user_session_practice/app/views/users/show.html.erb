@@ -1,0 +1,40 @@
+<h1>Show user: <%= @user.name %></h1>
+
+<h3>User details:</h3>
+<p>Name: <%= @user.name %></p>
+<p>Email: <%= @user.email %></p>
+
+<div class="controls">
+  <%= link_to 'Edit User', edit_user_path(@user) %> |
+  <%= link_to 'Delete User', user_path(@user), method: :delete, data: {confirm: 'Are you sure?'} %>
+</div>
+
+<hr>
+
+<h3>Project details:</h3>
+<% if @user.projects %>
+  <ul>
+    <% @user.projects.all.each do |el| %>
+      <li><%= link_to "#{el.name} by #{el.user.name}", project_path(el) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Add New Project', new_project_path %>
+</div>
+
+<hr>
+
+<h3>Pledges made:</h3>
+<% if @user.pledges %>
+  <ul>
+    <% @user.pledges.all.each do |el| %>
+      <li><%= link_to "#{number_to_currency(el.amount)} for #{el.project.name} by #{el.project.user.name}", "/users/#{@user.id}/pledges/#{el.id}" %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Find a New Pledge', projects_path %>
+</div>

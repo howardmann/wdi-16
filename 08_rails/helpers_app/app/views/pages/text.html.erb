@@ -1,0 +1,25 @@
+<h1>Pages#text</h1>
+<p>Find me in app/views/pages/text.html.erb</p>
+
+<p>Original text inputs:</p>
+<ul>
+  <li>I have <%= @friends %> friends</li>
+  <li>I have <%= @enemies %> enemies</li>
+  <li><%= @fairytale %></li>
+</ul>
+
+<p>Rails text helpers:</p>
+<ul>
+  <li>I have <%= pluralize( @friends, "friend" ) %></li>
+  <li>I have <%= pluralize( @enemies, "enemy") %> </li>
+  <li><%= truncate( @fairytale, length: 30, separator: ' ') %></li>
+</ul>
+
+<ul>
+  <% @numbers.each do |num| %>
+    <li style="background-color: <%= cycle( "gainsboro", "ghostwhite", "hotpink", "chartreuse", "palegoldenrod", "peru") %>">
+      <%= num %>
+    </li>
+    <!-- <li style="css: <%#= cycle("hot","not") %>"> </li> -->
+  <% end %>
+</ul>
