@@ -16,4 +16,8 @@ class Project < ActiveRecord::Base
 
   validates :name, :description, presence: true
 
+  def sum_amount
+    pledges.sum(:amount)
+  end
+
 end

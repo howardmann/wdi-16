@@ -7,9 +7,8 @@ class ApplicationController < ActionController::Base
 
   private
     def fetch_user
-      # session[:user_id] = nil
 
-      @current_user = User.find(session[:user_id]) if session[:user_id]
+      @current_user = User.find_by(:id => session[:user_id]) if session[:user_id]
 
       session[:user_id] = nil unless @current_user.present?
 
