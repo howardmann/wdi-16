@@ -1,0 +1,39 @@
+/* For styling placeholder text */
+::-webkit-input-placeholder {
+  color: lightslategray;
+  opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightslategray;
+  font-family: monospace;
+  margin: 0;
+}
+
+div.container {
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  max-width: 1000px;
+  width: 80%;
+  min-height: 80vh;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  outline: none;
+  padding: 5px 10px;
+  font-family: monospace;
+}
+
+img#poster {
+  max-width: 150px;
+}

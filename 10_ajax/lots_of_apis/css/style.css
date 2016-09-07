@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+/*If there is content outside of the screen you wont be able to scroll to it */
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background-color: gainsboro;
+  margin: 0;
+  font-family: monospace;
+  text-align: center;
+}
+nav {
+  overflow: hidden;
+  height: 80px;
+  line-height: 80px;
+  background: white;
+}
+nav h1 {
+  margin: 0;
+}
+.col {
+  float: left;
+  padding: 0 5px;
+}
+.col-4 {
+  width: 33.33333333333%;
+  width: -webkit-calc( 100% /3 );
+  width: -moz-calc( 100% /3 );
+  width: -ms-calc( 100% /3 );
+  width: -o-calc( 100% /3 );
+  width: calc( 100% /3 );
+  border: 1px solid hotpink;
+}
+.giphy, .swanson, .norris {
+  height: -webkit-calc(100vh - 80px);
+  height: -moz-calc(100vh - 80px);
+  height: -ms-calc(100vh - 80px);
+  height: -o-calc(100vh - 80px);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.giphy img#content {
+  display: block;
+  margin: 0 auto;
+  width: 100%;  
+}
