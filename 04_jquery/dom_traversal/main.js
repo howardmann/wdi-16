@@ -1,7 +1,5 @@
 console.log("DOM traversal practice");
 
-
-
 // Select first heading and add class of hot
 $('h2').first().addClass('hot');
 
