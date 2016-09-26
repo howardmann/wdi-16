@@ -1,0 +1,97 @@
+/* em, rem */
+
+/* Use rem to go back to root html, body font-size. Use em to go to nearest parent div font-size */
+
+html, body {
+  font-size: 10px;  /* Used to set 1em or 1rem base value */
+}
+
+.em {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100em;
+  max-width: 100%;
+}
+
+/* Apply styles if browser width is up to the max-width */
+@media (max-width: 500px) {
+  html, body {
+    font-size: 16px;
+  }
+}
+
+/* GRID SYSTEM */
+
+* {
+  box-sizing: border-box;
+}
+
+.container .col {
+  float: left;
+  min-height: 100px;
+  background-color: gainsboro;
+  border: 1px solid black;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333333%;
+  width: calc(100%/ 3);
+}
+
+.col-8 {
+  width: 66.666666666%;
+  width: calc(200% / 3);
+}
+
+.col-9 {
+  width: 75%;
+}
+
+@media (max-width: 760px) {
+  .sm-col-3 {
+    width: 25%;
+  }
+
+  .sm-col-6 {
+    width: 50%;
+  }
+
+  .sm-col-12 {
+    width: 100%;
+  }
+}
+
+
+/* ipad equivalent media query between 760px and 1200px*/
+
+@media (max-width: 1200px) and (min-width: 761px) {
+  .md-col-3 {
+    width: 25%;
+  }
+
+  .md-col-6 {
+    width: 50%;
+  }
+
+  .md-col-12 {
+    width: 100%;
+  }
+}
