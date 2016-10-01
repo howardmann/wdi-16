@@ -1,0 +1,8 @@
+// Run terminal command to compile scss into css
+// sass style.scss:style.css
+// Syntax file.scss:file.css
+// watch for scss changes
+// sass --watch sass style.scss:style.css
+body {
+  background-color: gainsboro;
+}

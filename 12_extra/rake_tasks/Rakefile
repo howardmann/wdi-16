@@ -1,0 +1,32 @@
+namespace :admin do
+  desc "make ten files"
+  task :make_files do
+    n = 1
+    limit = 10
+
+    limit.times do
+      sh "touch file#{n}.txt"
+      sh "echo this is file number #{n} >> file#{n}.txt"
+      n += 1
+    end
+  end
+end
+
+# In terminal run rake -T, gives a description
+
+namespace :wolf do
+  desc "howling at the moon"
+  task :howl_at_the_moon do
+    puts "Currently howling at the moon"
+  end
+
+  desc "thinking of the moon"
+  task :think_of_the_moon do
+    puts "puts think of the moon"
+  end
+
+  desc "full moon dependencies"
+  task :full_moon => [:think_of_the_moon,:howl_at_the_moon] do
+    puts "ran dependencies above"
+  end
+end

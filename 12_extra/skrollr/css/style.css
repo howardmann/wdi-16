@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: aliceblue;
+  height: 300px;
+}
+
+.divider {
+  height: 100px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+footer {
+  background-color: gainsboro;
+  height: 300px;
+}
+
+.col {
+  width: calc(100%/3);
+  float: left;
+  border: 1px solid black;
+  box-sizing: border-box;
+  min-height: 300px;
+  padding: 10px 20px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  padding: 10px 20px;
+  margin: 40px auto;
+}

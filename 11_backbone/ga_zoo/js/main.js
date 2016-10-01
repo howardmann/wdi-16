@@ -335,7 +335,7 @@ var ZooView = Backbone.View.extend({
 
     // Event handlers go here
     // .listenTo is a Backbone event listner that takes four args .listenTo(model, 'change', callback)
-    // Alternative: this.collection.on('add', this.render)
+    // Alternative: this.collection.on('add', this.render, this)
     this.listenTo(this.collection, 'add', this.render);
     // For removing listener
     this.listenTo(this.collection, 'remove', this.render);

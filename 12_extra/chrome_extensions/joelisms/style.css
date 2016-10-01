@@ -1,0 +1,21 @@
+body {
+  width: 600px;
+  height: 600px;
+  font-family: monospace;
+  margin: 0 autp;
+  text-align: center;
+  background-color: rebeccapurple;
+  color:white;
+}
+
+.container {
+  max-width: 450px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: gainsboro;
+  padding: 20px;
+}
+
+.quote {
+  font-size: 20px;
+}

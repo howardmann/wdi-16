@@ -1,0 +1,57 @@
+body {
+  font-family: monospace;
+  height: 100vh;
+}
+
+h1 {
+  position: absolute;
+  border: 1px solid black;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+}
+
+.unsplash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 20vh;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  font-size: 15px;
+  padding: 5px 10px;
+  border: 2px solid blue;
+  color: blue;
+  background: white;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  outline: none;
+}
+
+.controls button:hover {
+  color: white;
+  background: blue;
+}
+
+/*div.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: red;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+}*/
